@@ -3,12 +3,11 @@ number = Random.new.rand(1..1000)
 def number_game(ran_num, user_num)
   guesses = 1
   until user_num == ran_num
+    guesses += 1
     if user_num > ran_num
-      guesses += 1
       puts "\n#{user_num} is higher than my number, try a lower number!\n\nWhat is your next number?"
       user_num = gets.chomp.to_i
     else
-      guesses += 1
       puts "\n#{user_num} is lower than my number, try a higher number!\n\nWhat is your next number?"
       user_num = gets.chomp.to_i
     end
