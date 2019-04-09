@@ -12,7 +12,11 @@ def number_game(ran_num, user_num)
       user_num = gets.chomp.to_i
     end
   end
-    puts "That's right! #{user_num} is the number I selected!\nYou took #{guesses} attempts to get it right!"
+    if guesses == 1
+      puts "Holy smokes! You got it on your first attempt!"
+    else
+      puts "That's right! #{user_num} is the number I selected!\nYou took #{guesses} attempts to get it right!"
+    end
 end
 
 puts "I have seleted a number between 1 and 1000. Try to guess what it is!\nCan I have your first guess?"
